@@ -13,11 +13,9 @@ export const useChat = () => {
       if (!userId) {
         throw new Error('User ID not found. Please log in again.')
       }
-      // POST /customer/{user_id}/ - token will be added automatically by interceptor
+      // POST /api/customer/{user_id}/ - with baseURL '/api'
       const response = await http.post(`/customer/${userId}/`, {
         question: message,
-      }, {
-        baseURL: ''  // Override baseURL for this request (token still added by interceptor)
       })
       return response.data
     },
@@ -96,5 +94,4 @@ export const useChat = () => {
     isSending: sendMessageMutation.isPending,
   }
 }
-
 

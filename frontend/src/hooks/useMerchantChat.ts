@@ -116,8 +116,6 @@ export const useMerchantChat = () => {
       // Use empty baseURL to call /merchant/ directly (without /api prefix)
       const response = await http.post(`/merchant/${userId}/user_portrait/`, {
         question,
-      }, {
-        baseURL: ''  // Override baseURL for this request (token still added by interceptor)
       })
       return response.data
     },
@@ -287,4 +285,3 @@ export const useMerchantChat = () => {
     isGeneratingPortrait: generateUserPortraitMutation.isPending,
   }
 }
-
