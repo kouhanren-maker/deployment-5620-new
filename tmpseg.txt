@@ -1,0 +1,7 @@
+    # 商家画像：对接季度报�?-> merchant_hot_products
+    # 注意：后端当前模型与写库字段存在不一致（merchant_id 字段缺失），
+    # 若后端未调整，写库会报参数错误；此处仍按其期望结构回传�?
+    if getattr(q, "merchant_id", None) is not None:
+        try:
+            quarter = _infer_quarter_from_text(q.text)
+            # 生成季度报告（使用已�?reporter�?

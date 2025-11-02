@@ -1,0 +1,28 @@
+# Git & VCS
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*.pyo
+*.pyd
+*.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# Envs & secrets (pass via environment instead of baking into image)
+.env
+*.env
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode
+.idea
+
+# Build artifacts
+dist
+build
+
+# Build context is agent/, so no need to exclude repo root paths

@@ -1,0 +1,21 @@
+name: agent-stack
+services:
+  agent:
+    build: .
+    image: agent-service:latest
+    container_name: agent-service
+    ports:
+      - "9000:9000"
+    environment:
+      # 把密钥通过环境变量传入（不要写入镜像）
+      SERPAPI_KEY: ${SERPAPI_KEY}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      # 可选参数：根据需要开启/调整
+      # AGENT_BACKEND_TOPK: "100"
+      # AGENT_MAX_SEARCH_LIMIT: "80"
+      # AGENT_MAX_TOPK: "10"
+      # AGENT_DEFAULT_QUARTER: "2025-Q4"
+      # LLM_MODEL: "gpt-4o-mini"
+      # LLM_TIMEOUT_S: "20"
+      # LLM_MAX_RETRIES: "3"
+    restart: unless-stopped

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0b41918c-5d92-41c1-bd8e-7f549c2f78ca" name="Changes" comment="fully connected">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/dist/assets/antd-mNhadPEl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/dist/assets/index-BJENtmJV.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/dist/assets/index-owsyRl0T.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/dist/assets/query-Cjemb2UU.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/dist/assets/router-D3zesKTR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/dist/assets/state-Bg0AX1NM.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/dist/assets/styled-mzmMSqQA.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/dist/assets/vendor-gH-7aFTg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/dist/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/api/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/api/http.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/components/MessageItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/components/MessageItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/components/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/components/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/hooks/useAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/hooks/useAuth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/hooks/useAutoScroll.ts" beforeDir="false" afterPath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/hooks/useAutoScroll.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/hooks/useChat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/hooks/useChat.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/hooks/useMerchantChat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/hooks/useMerchantChat.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/pages/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/pages/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/store/authStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/5620_AI_agent-Peiru-You/elec5620_frontend/src/store/authStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping/db/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/shopping/db/db.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mtan0527&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.sydney.edu.au/mtan0527/5620_AI_agent.git&quot;,
+    &quot;accountId&quot;: &quot;99e21174-47a5-4601-9cc6-f9d12b4ea117&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="34F9CKTNk4wPtuxDAuaqlpAycqg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "rick__dev",
+    "last_opened_file_path": "D:/usyd/5620",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "D:\\usyd\\5620\\5620_AI_agent-Peiru-You\\elec5620_frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\usyd\5620" />
+      <recent name="D:\usyd\5620\5620_AI_agent-Peiru-You\elec5620_frontend" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-PY-252.25557.178" />
+        <option value="bundled-python-sdk-ce6832f46686-7b97d883f26b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.25557.178" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b41918c-5d92-41c1-bd8e-7f549c2f78ca" name="Changes" comment="" />
+      <created>1760798323692</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760798323692</updated>
+      <workItem from="1760798325000" duration="1101000" />
+      <workItem from="1760800346939" duration="1175000" />
+      <workItem from="1761104010617" duration="2309000" />
+      <workItem from="1761671153268" duration="4938000" />
+      <workItem from="1761714229675" duration="6165000" />
+      <workItem from="1761749201487" duration="3000" />
+      <workItem from="1761805450552" duration="50000" />
+      <workItem from="1761985944405" duration="12370000" />
+      <workItem from="1762000130705" duration="1437000" />
+    </task>
+    <task id="LOCAL-00001" summary="api doc">
+      <option name="closed" value="true" />
+      <created>1761106803972</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761106803972</updated>
+    </task>
+    <task id="LOCAL-00002" summary="merchant user portrait">
+      <option name="closed" value="true" />
+      <created>1761714633139</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761714633139</updated>
+    </task>
+    <task id="LOCAL-00003" summary="connect aiagent customer">
+      <option name="closed" value="true" />
+      <created>1761980115283</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761980115283</updated>
+    </task>
+    <task id="LOCAL-00004" summary="merge portrait">
+      <option name="closed" value="true" />
+      <created>1761985593459</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761985593459</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fully connected with customer">
+      <option name="closed" value="true" />
+      <created>1761988150606</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761988150607</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fully connected">
+      <option name="closed" value="true" />
+      <created>1761996391497</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761996391497</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="api doc" />
+    <MESSAGE value="merchant user portrait" />
+    <MESSAGE value="connect aiagent customer" />
+    <MESSAGE value="merge portrait" />
+    <MESSAGE value="fully connected with customer" />
+    <MESSAGE value="fully connected" />
+    <option name="LAST_COMMIT_MESSAGE" value="fully connected" />
+  </component>
+</project>

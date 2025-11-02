@@ -1,0 +1,11 @@
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+.env
+.git
+.gitignore
+.media/
+staticfiles/
+node_modules/
+dist/

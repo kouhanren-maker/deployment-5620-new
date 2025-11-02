@@ -1,0 +1,178 @@
+{
+  "skill": "seasonal_report",
+  "ok": true,
+  "answer": "Top 20 best-selling products in 2024-Q3.",
+  "facts": {
+    "quarter": "2024-Q3",
+    "top_products": [
+      {
+        "rank": 1,
+        "name": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+        "category": "electronics",
+        "price": 599,
+        "sales": 9471
+      },
+      {
+        "rank": 2,
+        "name": "DANVOUY Womens T Shirt Casual Cotton Short",
+        "category": "women's clothing",
+        "price": 12.99,
+        "sales": 8771
+      },
+      {
+        "rank": 3,
+        "name": "Solid Gold Petite Micropave ",
+        "category": "jewelery",
+        "price": 168,
+        "sales": 8680
+      },
+      {
+        "rank": 4,
+        "name": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+        "category": "electronics",
+        "price": 999.99,
+        "sales": 8187
+      },
+      {
+        "rank": 5,
+        "name": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+        "category": "electronics",
+        "price": 64,
+        "sales": 7646
+      },
+      {
+        "rank": 6,
+        "name": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+        "category": "women's clothing",
+        "price": 39.99,
+        "sales": 7606
+      },
+      {
+        "rank": 7,
+        "name": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+        "category": "electronics",
+        "price": 109,
+        "sales": 6484
+      },
+      {
+        "rank": 8,
+        "name": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+        "category": "electronics",
+        "price": 114,
+        "sales": 5370
+      },
+      {
+        "rank": 9,
+        "name": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+        "category": "jewelery",
+        "price": 10.99,
+        "sales": 4375
+      },
+      {
+        "rank": 10,
+        "name": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+        "category": "jewelery",
+        "price": 695,
+        "sales": 4337
+      },
+      {
+        "rank": 11,
+        "name": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+        "category": "women's clothing",
+        "price": 29.95,
+        "sales": 3666
+      },
+      {
+        "rank": 12,
+        "name": "Mens Casual Premium Slim Fit T-Shirts ",
+        "category": "men's clothing",
+        "price": 22.3,
+        "sales": 3208
+      },
+      {
+        "rank": 13,
+        "name": "Mens Cotton Jacket",
+        "category": "men's clothing",
+        "price": 55.99,
+        "sales": 2889
+      },
+      {
+        "rank": 14,
+        "name": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+        "category": "electronics",
+        "price": 109,
+        "sales": 2770
+      },
+      {
+        "rank": 15,
+        "name": "MBJ Women's Solid Short Sleeve Boat Neck V ",
+        "category": "women's clothing",
+        "price": 9.85,
+        "sales": 2255
+      },
+      {
+        "rank": 16,
+        "name": "White Gold Plated Princess",
+        "category": "jewelery",
+        "price": 9.99,
+        "sales": 1845
+      },
+      {
+        "rank": 17,
+        "name": "Opna Women's Short Sleeve Moisture",
+        "category": "women's clothing",
+        "price": 7.95,
+        "sales": 1218
+      },
+      {
+        "rank": 18,
+        "name": "Mens Casual Slim Fit",
+        "category": "men's clothing",
+        "price": 15.99,
+        "sales": 819
+      },
+      {
+        "rank": 19,
+        "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        "category": "men's clothing",
+        "price": 109.95,
+        "sales": 641
+      },
+      {
+        "rank": 20,
+        "name": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+        "category": "women's clothing",
+        "price": 56.99,
+        "sales": 470
+      }
+    ],
+    "summary": "In Q3 2024, the market saw a strong performance in electronics, particularly with high-demand items like the Acer SB220Q monitor and Samsung's gaming monitor, indicating a growing trend towards advanced display technology among consumers. Women's clothing also emerged as a dominant category, with casual and functional apparel like the DANVOUY T-shirt and rain jackets leading sales, reflecting a shift towards comfort and versatility in fashion. Additionally, jewelry sales remained robust, showcasing a continued consumer interest in affordable yet stylish accessories, further diversifying the market landscape.",
+    "latency_ms": 12452
+  },
+  "trace": {
+    "plan": "direct seasonal report for 2024-Q3",
+    "steps": [
+      {
+        "name": "parse_quarter",
+        "note": "Year=2024, Quarter=3"
+      },
+      {
+        "name": "data_fetch",
+        "note": "Fetched 20 products"
+      },
+      {
+        "name": "data_sort",
+        "note": "Selected top 50 products"
+      }
+    ],
+    "providers": [],
+    "metrics": {
+      "request_id": "bc610ea3-683c-4dd9-b882-72e580582969",
+      "service_version": "0.2.0"
+    }
+  },
+  "request_id": "bc610ea3-683c-4dd9-b882-72e580582969",
+  "schema_version": "1.0",
+  "service_version": "0.2.0"
+
+}

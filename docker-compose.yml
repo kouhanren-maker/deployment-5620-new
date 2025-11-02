@@ -1,0 +1,71 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # 前端访问后端 API 的地址（容器内通过服务名 backend 访问）
+        VITE_API_BASE_URL: "http://backend:8000"
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
+
+  backend:
+    build:
+      context: ./shopping     # ✅ Django 项目路径
+      dockerfile: Dockerfile  # 若文件名不同，请改成实际名称
+    container_name: isa-backend
+
+    # ✅ 加载 .env 文件（必须放在这一行）
+    env_file:
+      - ./shopping/.env
+
+    environment:
+      # 追加单独环境变量（会与 .env 合并）
+      AGENT_URL: "http://agent:9000/agent"
+
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      - agent
+      - mysql
+
+    volumes:
+      # ✅ 挂载 Django 项目代码目录
+      - ./shopping:/app
+
+      # ✅ 挂载 SSL 证书（你 ca.pem 在 shopping 目录下）
+      - ./shopping/ca.pem:/app/ca.pem:ro
+
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+    restart: unless-stopped
+
+  agent:
+    build:
+      context: ./agent
+      dockerfile: Dockerfile
+    container_name: isa-agent
+    ports:
+      - "9000:9000"
+    restart: always
+
+  mysql:
+    image: mysql:8.0
+    container_name: isa-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: intelligent_shopping_assistant
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:

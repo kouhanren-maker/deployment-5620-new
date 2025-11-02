@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: django-web
+
+    # 读取 .env（你截图里的那个）
+    env_file: .env
+
+    # 可选：显式关掉任何启动脚本里的自动迁移逻辑（如果你采用了方案A的环境变量开关）
+    environment:
+      AUTO_MIGRATE: "0"
+
+    ports:
+      - "8000:8000"   # http://localhost:8000
+
+    # 如果你的 MySQL 在本机或 WSL 主机上，容器里用 host.docker.internal 访问
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+    volumes:
+      # Aiven CA 证书（或你自己的证书），容器内路径 /app/ca.pem
+      - ./aiven/ca.pem:/app/ca.pem:ro
+
+
+
+    # 如果 gunicorn 退出，自动重启
+    restart: unless-stopped
+

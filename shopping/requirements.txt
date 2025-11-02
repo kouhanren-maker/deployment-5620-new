@@ -1,0 +1,22 @@
+# Web framework
+Django>=5.2,<6.0
+
+# Django REST Framework
+djangorestframework>=3.15,<3.16
+
+# WSGI server
+gunicorn>=21.2
+
+# MySQL 驱动（纯 Python，免编译）
+pymysql>=1.1.0        # 建议用小写包名，pip 不区分大小写，但小写更常见
+
+# 环境变量
+python-dotenv>=1.0.1
+
+# HTTP 调用
+requests>=2.31
+
+# JWT
+PyJWT>=2.8
+
+django-cors-headers

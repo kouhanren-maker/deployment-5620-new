@@ -1,0 +1,120 @@
+Agent 服务 Docker 部署说明
+=================================
+
+本说明仅针对 agent 子项目的容器化与部署（相关文件均位于 `agent/` 目录）
+
+一、前置要求
+---------------------------------
+1) 已安装 Docker（建议 24+，含 docker compose）
+2) 可用的 SerpAPI Key（环境变量：SERPAPI_KEY）
+3) 可用的 OpenAI Key（环境变量：OPENAI_API_KEY）
+4) 服务器放通 9000 端口（服务监听 9000）
+
+二、快速开始（不使用 compose）
+---------------------------------
+1) 构建镜像（任选其一）：
+   - 进入 agent 目录：
+     cd agent && docker build -t agent-service .
+   - 或在项目根目录执行：
+     docker build -f agent/Dockerfile -t agent-service agent
+
+2) 运行容器（映射 9000 端口）：
+   docker run -d --name agent-service \
+     -p 9000:9000 \
+     -e SERPAPI_KEY=你的SerpApiKey \
+     -e OPENAI_API_KEY=你的OpenAIKey \
+     agent-service
+
+3) 验证运行：
+   - 打开 http://服务器IP或域名:9000/docs 查看 OpenAPI 文档
+   - 关键路由：/agent
+
+三、使用 docker compose 部署
+---------------------------------
+compose 文件位于 `agent/compose.yml`，默认暴露 9000 端口。
+
+1) 在 `agent/` 目录创建 `.env`（或复制 `agent/.env.example`）：
+   SERPAPI_KEY=你的SerpApiKey
+   OPENAI_API_KEY=你的OpenAIKey
+   # 可选：LLM_MODEL=gpt-4o-mini
+
+2) 启动服务（任选其一）：
+   - 进入 agent 目录：
+     cd agent && docker compose up -d
+   - 或在根目录指定 compose 文件：
+     docker compose -f agent/compose.yml up -d
+
+3) 查看日志：
+   - cd agent && docker compose logs -f agent
+   - 或 docker compose -f agent/compose.yml logs -f agent
+
+四、环境变量与配置
+---------------------------------
+- 必填：
+  - SERPAPI_KEY：SerpAPI 密钥（/compare 和部分富化功能使用）
+  - OPENAI_API_KEY：OpenAI 密钥（意图识别/推荐/画像/季报摘要使用）
+
+- 可选：
+  - LLM_MODEL（默认 gpt-4o-mini）
+  - LLM_TIMEOUT_S、LLM_MAX_RETRIES
+  - AGENT_BACKEND_TOPK、AGENT_MAX_SEARCH_LIMIT、AGENT_MAX_TOPK、AGENT_DEFAULT_QUARTER
+
+五、端口与健康检查
+---------------------------------
+- 服务监听容器内端口 9000（Dockerfile 已 EXPOSE 9000）
+- 健康检查参考：/health、/version、/docs
+
+六、升级与回滚
+---------------------------------
+1) 重新构建并启动：
+   - cd agent && docker compose build --no-cache && docker compose up -d
+   - 或 docker compose -f agent/compose.yml build --no-cache && docker compose -f agent/compose.yml up -d
+
+2) 从镜像仓库拉取：
+   - docker compose -f agent/compose.yml pull && docker compose -f agent/compose.yml up -d
+
+3) 回滚：
+   - 使用先前镜像 tag 或 compose 历史版本
+
+七、常见问题排查（FAQ）
+---------------------------------
+1) /compare 报错 "SERPAPI_KEY not set":
+   - 检查容器环境变量是否传入；生产建议用平台 Secrets 注入
+
+2) 无法访问 http://localhost:9000/docs：
+   - 检查容器状态（docker ps）、端口映射（-p 9000:9000）、防火墙
+   - 查看日志（docker logs -f agent-service 或 compose logs）
+
+3) 仅部署 agent，不包含 shopping（Django）：
+   - 本镜像仅包含 `agent/`；如需 Django，请另建其 Dockerfile 与 compose 服务
+
+八、OpenAI API 读取说明
+---------------------------------
+- 使用 `langchain_openai.ChatOpenAI`，默认从 `OPENAI_API_KEY` 读取密钥
+- 模型名通过 `LLM_MODEL` 控制（默认 `gpt-4o-mini`）
+- 相关文件：
+  - agent/router/intent_router.py
+  - agent/recommender/recommend_agent.py
+  - agent/profiler/audience_agent.py
+  - agent/reporter/seasonal_report_agent.py
+
+九、与容器化相关的文件（均在 agent/ 下）
+---------------------------------
+- agent/Dockerfile
+- agent/compose.yml
+- agent/.dockerignore
+- agent/requirements.txt
+- agent/.env.example
+- agent/DEPLOYMENT_CN.txt
+
+如何使用（新路径）
+
+构建镜像（任选其一）
+cd agent && docker build -t agent-service .
+或 docker build -f agent/Dockerfile -t agent-service agent
+运行容器
+docker run -d -p 9000:9000 -e SERPAPI_KEY=你的Key -e OPENAI_API_KEY=你的Key --name agent-service agent-service
+使用 compose
+cp agent/.env.example agent/.env 并填好变量
+cd agent && docker compose up -d
+或 docker compose -f agent/compose.yml up -d
