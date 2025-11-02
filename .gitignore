@@ -1,0 +1,22 @@
+# Environment
+.env
+*.env
+
+# Python / Django
+__pycache__/
+*.py[cod]
+*.log
+
+# Node / React
+node_modules/
+dist/
+build/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Docker
+*.pid
+*.sock
