@@ -1,22 +1,30 @@
 """
 URL configuration for shopping project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
+from django.conf import settings
+from django.http import HttpResponse
+import os
+
+
+# ✅ 根路径返回前端构建好的 index.html
+def serve_frontend(request):
+    index_path = os.path.join(settings.STATIC_ROOT, "index.html")
+    try:
+        with open(index_path, encoding="utf-8") as f:
+            return HttpResponse(f.read())
+    except FileNotFoundError:
+        return HttpResponse(
+            "⚠️ Frontend not built or staticfiles missing. Please run npm run build and redeploy.",
+            status=501,
+        )
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("app.urls")),
+    path("api/", include("app.urls")),  # ✅ 所有后端接口统一前缀 /api/
+    re_path(r"^$", serve_frontend),     # ✅ 根路径返回 React 前端
+    re_path(r"^(?:.*)/?$", serve_frontend),  # ✅ 支持 React Router 路由（前端内部路径）
 ]
